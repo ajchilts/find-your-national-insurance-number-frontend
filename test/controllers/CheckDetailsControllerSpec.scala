@@ -86,26 +86,6 @@ class CheckDetailsControllerSpec extends SpecBase with SummaryListFluency {
     addressPostcode = Some(AddressPostcode("AA1 1AA"))
   )
 
-  val fakeAddressNoPostcode: Address = Address(
-    addressSequenceNumber = AddressSequenceNumber(0),
-    addressSource = Some(AddressSource.Customer),
-    countryCode = CountryCode(826), // 826 is the numeric code for the United Kingdom
-    addressType = AddressType.ResidentialAddress,
-    addressStatus = Some(AddressStatus.NotDlo),
-    addressStartDate = LocalDate.of(2000, 1, 1),
-    addressEndDate = Some(LocalDate.of(2022, 12, 31)),
-    addressLastConfirmedDate = Some(LocalDate.of(2022, 1, 1)),
-    vpaMail = Some(VpaMail(1)),
-    deliveryInfo = Some(DeliveryInfo("Delivery info")),
-    pafReference = Some(PafReference("PAF reference")),
-    addressLine1 = AddressLine("123 Fake Street"),
-    addressLine2 = AddressLine("Apt 4B"),
-    addressLine3 = Some(AddressLine("Faketown")),
-    addressLine4 = Some(AddressLine("Fakeshire")),
-    addressLine5 = Some(AddressLine("Fakecountry")),
-    addressPostcode = None
-  )
-
   val fakeIndividualDetails: IndividualDetails = IndividualDetails(
     ninoWithoutSuffix = "AB123456",
     ninoSuffix = Some(NinoSuffix("C")),
